@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">My Movies</string>
+    <string name="app_name">My Movies App</string>
+    <string name="lgIniciar">Iniciar sesión</string>
+    <string name="lgCorreo">Correo electrónico</string>
+    <string name="lgPassword">Contraseña</string>
+    <string name="lgRegistro">Registrarse</string>
+    <string name="lgBienvenido">Bienvenido</string>
+    <string name="lgOlvidar">¿Olvidaste la contraseña?</string>
 </resources>
