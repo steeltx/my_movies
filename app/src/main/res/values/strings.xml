@@ -6,4 +6,10 @@
     <string name="lgRegistro">Registrarse</string>
     <string name="lgBienvenido">Bienvenido</string>
     <string name="lgOlvidar">¿Olvidaste la contraseña?</string>
+    <string name="rgTitulo">Registro</string>
+    <string name="rgNombreCompleto">Nombre completo</string>
+    <string name="rgCorreo">Correo electrónico</string>
+    <string name="rgPassword">Contraseña</string>
+    <string name="rgPasswordRepeat">Repetir contraseña</string>
+    <string name="rgRegistro">Registrarse</string>
 </resources>
