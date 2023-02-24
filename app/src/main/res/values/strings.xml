@@ -12,4 +12,9 @@
     <string name="rgPassword">Contraseña</string>
     <string name="rgPasswordRepeat">Repetir contraseña</string>
     <string name="rgRegistro">Registrarse</string>
+    <string name="movies">Movies</string>
+    <string name="search">Search</string>
+    <string name="discover">Discover</string>
+    <string name="image">Image</string>
+    <string name="rgRegresar">Regresar</string>
 </resources>
