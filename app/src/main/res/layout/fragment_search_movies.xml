@@ -5,30 +5,144 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilSearch"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="8dp">
 
-        <EditText
-            android:id="@+id/edtSearch"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tieSearch"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_margin="10dp"
-            android:autofillHints="name"
+            android:layout_height="60dp"
             android:hint="@string/fgSearchBuscar"
-            android:inputType="text"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:inputType="text" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvMovies"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="visible"
-            tools:listitem="@layout/item_category" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    </LinearLayout>
+    <!-- Ingresar tabla para las categorias -->
+    <TableLayout
+        android:id="@+id/tblGenres"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:shrinkColumns="*"
+        android:stretchColumns="*"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilSearch"
+        tools:visibility="gone">
+
+        <TableRow android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/btnGenreAction"
+                android:layout_height="60dp"
+                android:layout_marginEnd="5dp"
+                android:text="@string/fgSearchAction" />
+
+            <Button
+                android:id="@+id/btnGenreAdventure"
+                android:layout_height="60dp"
+                android:layout_marginStart="5dp"
+                android:text="@string/fgSearchAdventure" />
+
+        </TableRow>
+
+        <TableRow android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/btnGenreAnimation"
+                android:layout_height="60dp"
+                android:layout_marginEnd="5dp"
+                android:text="@string/fgSearchAnimation" />
+
+            <Button
+                android:id="@+id/btnGenreComedy"
+                android:layout_height="60dp"
+                android:layout_marginStart="5dp"
+                android:text="@string/fgSearchComedy" />
+
+        </TableRow>
+
+        <TableRow android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/btnGenreCrime"
+                android:layout_height="60dp"
+                android:layout_marginEnd="5dp"
+                android:text="@string/fgSearchCrime" />
+
+            <Button
+                android:id="@+id/btnGenreDocumentary"
+                android:layout_height="60dp"
+                android:layout_marginStart="5dp"
+                android:text="@string/fgSearchDocumentary" />
+
+        </TableRow>
+
+        <TableRow android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/btnGenreDrama"
+                android:layout_height="60dp"
+                android:layout_marginEnd="5dp"
+                android:text="@string/fgSearchDrama" />
+
+            <Button
+                android:id="@+id/btnGenreFamily"
+                android:layout_height="60dp"
+                android:layout_marginStart="5dp"
+                android:text="@string/fgSearchFamily" />
+
+        </TableRow>
+
+        <TableRow android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/btnGenreFantasy"
+                android:layout_height="60dp"
+                android:layout_marginEnd="5dp"
+                android:text="@string/fgSearchFantasy" />
+
+            <Button
+                android:id="@+id/btnGenreHistory"
+                android:layout_height="60dp"
+                android:layout_marginStart="5dp"
+                android:text="@string/fgSearchHistory" />
+
+        </TableRow>
+
+        <TableRow android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/btnGenreHorror"
+                android:layout_height="60dp"
+                android:layout_marginEnd="5dp"
+                android:text="@string/fgSearchHorror" />
+
+            <Button
+                android:id="@+id/btnGenreMusic"
+                android:layout_height="60dp"
+                android:layout_marginStart="5dp"
+                android:text="@string/fgSearchMusic" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <!-- Mostrar cuando se encuentren resultados de busqueda -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilSearch"
+        tools:listitem="@layout/item_movie"
+        tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

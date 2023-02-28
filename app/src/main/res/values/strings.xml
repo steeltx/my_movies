@@ -20,5 +20,17 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="popular">Popular</string>
     <string name="top_rated">Top Rated</string>
-    <string name="fgSearchBuscar">Buscar películas o series ...</string>
+    <string name="fgSearchBuscar">Buscar películas o series …</string>
+    <string name="fgSearchAction">Action</string>
+    <string name="fgSearchAdventure">Adventure</string>
+    <string name="fgSearchAnimation">Animation</string>
+    <string name="fgSearchComedy">Comedy</string>
+    <string name="fgSearchCrime">Crime</string>
+    <string name="fgSearchDocumentary">Documentary</string>
+    <string name="fgSearchDrama">Drama</string>
+    <string name="fgSearchFamily">Family</string>
+    <string name="fgSearchFantasy">Fantasy</string>
+    <string name="fgSearchHistory">History</string>
+    <string name="fgSearchHorror">Horror</string>
+    <string name="fgSearchMusic">Music</string>
 </resources>
