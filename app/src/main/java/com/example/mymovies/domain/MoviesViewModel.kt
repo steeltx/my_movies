@@ -6,23 +6,16 @@ import com.example.mymovies.model.ItemMovie
 
 class MoviesViewModel: ViewModel() {
 
-    // Se ejecuta cuando se termina la app
-    override fun onCleared() {
-        super.onCleared()
-    }
+    lateinit var repository: MoviesRepository
 
+    // LiveData hace un puente entre la UI y el viewModel
     val movieList by lazy { MutableLiveData<List<ItemMovie>>() }
 
     /**
      * Obtener el listado de peliculas
      */
     fun getMovies(){
-        // Enviar un valor a live data
-        movieList.postValue(listOf<ItemMovie>(
-            ItemMovie("The Avengers","Marvel",""),
-            ItemMovie("Spiderman","Marvel",""),
-            ItemMovie("Thor","Marvel","")
-        ))
+        val movies = repository.getMovies()
     }
 
 }
