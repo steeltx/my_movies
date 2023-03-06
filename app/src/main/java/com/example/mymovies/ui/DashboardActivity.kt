@@ -31,6 +31,7 @@ class DashboardActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedL
         bottomNavigationView = findViewById(R.id.bottomNavigationView)
 
         bottomNavigationView.setOnItemSelectedListener(this)
+        bottomNavigationView.selectedItemId = R.id.navMovies
     }
 
     override fun onStart() {

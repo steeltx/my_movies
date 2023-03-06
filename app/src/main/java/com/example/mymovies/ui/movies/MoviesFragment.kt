@@ -14,10 +14,6 @@ class MoviesFragment : Fragment() {
 
     private lateinit var viewModel: MoviesViewModel
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -33,6 +29,7 @@ class MoviesFragment : Fragment() {
         viewModel = ViewModelProvider(this)[MoviesViewModel::class.java]
         viewModel.movieList.observe(viewLifecycleOwner){ movies ->
             Toast.makeText(context, movies.toString(), Toast.LENGTH_SHORT).show()
+            // agregar la logica cuando se recibe informacion
         }
     }
 
