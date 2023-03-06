@@ -20,7 +20,7 @@ class MoviesRepository {
     }
 
     suspend fun getMovies() : Result<List<ItemMovie>> {
-        val moviesResponse = retrofitService.getPopularMovies("","",0)
+        val moviesResponse = retrofitService.getPopularMovies("a803ee46f1492d691215b7b20a660bc4","es-MX",1)
 
         val httpCode = moviesResponse.code()
 
@@ -43,7 +43,8 @@ class MoviesRepository {
                 description = movieDto.description,
                 movieCover = movieDto.movieCover,
                 popularity = movieDto.popularity,
-                releaseDate = movieDto.releaseDate
+                releaseDate = movieDto.releaseDate,
+                voteAverage = movieDto.voteAverage
             )
         }
         return Result(listMovies, null)
